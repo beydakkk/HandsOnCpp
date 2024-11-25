@@ -6,6 +6,7 @@ class Node{
 public:
 	   int data;
 	   Node* next;
+	   
 	   // Constructor
 	   Node(int value){
 	   			data = value;
@@ -160,17 +161,21 @@ int main(){
     
     LinkedList list;
     
-    // Test insertions
     list.display();
+
     list.insertAtBeginning(10);
     list.display();
+
     list.insertAtEnd(20);
     list.display();
+
     list.insertAtEnd(30);
     list.display();
+
     list.insertFromMiddle(15, 1);
     list.display();
-    list.insertFromMiddle(40, 30); // will occur "Invalid index" error.
+
+    list.insertFromMiddle(40, 30); // occurs "Invalid index" error.
     list.display();
     
     
