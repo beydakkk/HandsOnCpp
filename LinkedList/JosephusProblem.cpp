@@ -33,7 +33,9 @@ int josephus(int n, int k){
     Node* tmp = head;
 
     while(head->next != head){  // Loop until only one node is left
-        for(int i = 0; i < k-1; i++){
+        if(k == 1)
+            return n;
+        for(int i = 1; i < k; i++){
             tmp = head;
             head = head->next;
         }
