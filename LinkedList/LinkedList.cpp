@@ -39,7 +39,7 @@ public:
     			tmp = tmp->next;
 		        tmp->next = newNode;   
 		    }   
-        }
+    }
 	   
 	void insertFromMiddle(int value, int index){
 		Node* newNode = new Node (value);
