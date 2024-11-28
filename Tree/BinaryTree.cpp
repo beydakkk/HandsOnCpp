@@ -14,41 +14,39 @@ struct Node {
 };
 
 Node* insert(Node* root, int value) {
-    if (root == nullptr) {
+    if (root == nullptr)
         return new Node(value);
-    }
-    if (value < root->data) {
+    if (value < root->data) 
         root->left = insert(root->left, value);
-    } else {
+    else 
         root->right = insert(root->right, value);
-    }
 
     return root;
 }
 
 // for sorting values in descending order
 void inorderTraversal(Node* root) {
-    if (root == nullptr) {
+    if (root == nullptr)
         return;
-    }
+    
     inorderTraversal(root->left);
     cout << root->data << " ";
     inorderTraversal(root->right);
 }
 
 void preorderTraversal(Node* root) {
-    if (root == nullptr) {
+    if (root == nullptr) 
         return;
-    }
+    
     cout << root->data << " ";
     preorderTraversal(root->left); 
     preorderTraversal(root->right);
 }
 
 void postorderTraversal(Node* root) {
-    if (root == nullptr) {
+    if (root == nullptr) 
         return;
-    }
+    
     postorderTraversal(root->left);
     postorderTraversal(root->right);
     cout << root->data << " ";
